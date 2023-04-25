@@ -1,4 +1,4 @@
-SRC = 
+SRC = src/main.c src/parser.c src/error.c src/stacks.c
 
 OBJS = ${SRC:.c=.o}
 
@@ -6,11 +6,11 @@ NAME = push_swap
 
 #BONUS DEFINITIONS#
 
-SRC_BONUS = ./src_bonus/server_bonus.c
+SRC_BONUS = 
 
 OBJS_BONUS = ${SRC_BONUS:.c=.o}
 
-NAME_BONUS = server_bonus
+NAME_BONUS = 
 
 #COMPILATION UTILS#
 
