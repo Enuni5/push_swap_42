@@ -1,4 +1,4 @@
-SRC = src/main.c src/parser.c src/error.c src/stacks.c
+SRC = src/main.c src/memory.c src/error.c src/stacks.c src/check.c 
 
 OBJS = ${SRC:.c=.o}
 

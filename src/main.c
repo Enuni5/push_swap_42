@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:34:32 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/25 21:13:49 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/04/27 13:58:54 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,23 @@ int	main(int argc, char **argv)
 	char	**input;
 	int		stack_size;
 
-	(void)input;
 	if (argc > 1)
 	{
 		argv++;
-		ft_check(argv, argc - 1);
-		stack_size = ft_stack_size(argv, argc - 1);
-		stack_a = ft_populate_stack(argv, stack_size, argc - 1);
+		input = ft_save_str(argv, argc - 1);
+		if (input == NULL)
+			return (0);
+		stack_size = ft_input_size(input);
+		stack_a = ft_populate_stack(input, stack_size);
+		free_matrix(input);
+		free(stack_a);
+		//stack_size = ft_stack_size(argv, argc - 1);
+		//stack_a = ft_populate_stack(argv, stack_size, argc - 1);
 	}
 	return (0);
 }
 
-		/* if (argc == 2)
+/* if (argc == 2)
 		{
 			while (input[stack_size])
 				stack_size++;
@@ -39,4 +44,5 @@ int	main(int argc, char **argv)
 		{
 			stack_size = argc - 1;
 			stack_a = ft_fill_stack(stack_a, argv, stack_size);
-		} */
+		} 
+*/

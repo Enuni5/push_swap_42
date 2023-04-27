@@ -6,14 +6,17 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:31:47 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/25 17:41:42 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/04/27 13:15:05 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_throw_error(void)
+void	ft_throw_error(void *ptr)
 {
 	ft_putstr_fd("Error\n", 2);
+	//if (ptr)
+	//	free(ptr);
+	(void) ptr;
 	exit(1);
 }
