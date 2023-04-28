@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 10:24:13 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/27 13:05:58 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/04/28 21:18:51 by emilionunez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,12 @@ void	ft_is_number(char *num)
 }
 
 // Checks if the string given is inside an int up/down limit
-void	ft_int_limits(int num)
+void	ft_int_limits(char *num)
 {
-	if (num < INT_MIN || num > INT_MAX)
+	long	number;
+
+	number = ft_atoi(num);
+	if (number < INT_MIN || number > INT_MAX)
 		ft_throw_error(NULL);
 }
 
@@ -61,22 +64,6 @@ void	ft_duplicated(int *stack, int size)
 		i++;
 		j = i + 1;
 	}
-}
-
-// Starts the check process, if error, returns -1
-int	ft_check(char **input)
-{
-	int	i;
-
-	i = 0;
-	while (input[i])
-	{
-		ft_is_number(input[i]);
-		//ft_int_limits(input[i]);
-		ft_printf("%s ", input[i]);
-		i++;
-	}
-	return (0);
 }
 
 /*

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stacks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 20:07:50 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/27 14:02:27 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/04/28 21:17:43 by emilionunez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ int	*ft_populate_stack(char **input, int size)
 	while (i < size && input[i])
 	{
 		ft_is_number(input[i]);
-		stack[i] = ft_atoi(input[i]);
-		printf("Stack: %d", stack[i]);
-		ft_int_limits(stack[i]);
+		ft_int_limits(input[i]);
+		stack[i] = (int)ft_atoi(input[i]);
 		i++;
 	}
 	ft_duplicated(stack, size);

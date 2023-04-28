@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   memory.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:39:27 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/27 13:57:50 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/04/28 21:18:15 by emilionunez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	**ft_save_str(char **input, int size)
 	return (stack);
 }
 
-void	free_matrix(char **matrix)
+void	ft_free_matrix(char **matrix)
 {
 	int	i;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:34:32 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/27 13:58:54 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/04/28 21:18:29 by emilionunez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,9 @@ int	main(int argc, char **argv)
 			return (0);
 		stack_size = ft_input_size(input);
 		stack_a = ft_populate_stack(input, stack_size);
-		free_matrix(input);
+		ft_free_matrix(input);
 		free(stack_a);
-		//stack_size = ft_stack_size(argv, argc - 1);
-		//stack_a = ft_populate_stack(argv, stack_size, argc - 1);
+		system("leaks push_swap");
 	}
 	return (0);
 }
-
-/* if (argc == 2)
-		{
-			while (input[stack_size])
-				stack_size++;
-			stack_a = ft_fill_stack(stack_a, input, stack_size);
-		}
-		else
-		{
-			stack_size = argc - 1;
-			stack_a = ft_fill_stack(stack_a, argv, stack_size);
-		} 
-*/
