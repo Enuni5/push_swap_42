@@ -6,7 +6,7 @@
 /*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 10:24:13 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/28 21:18:51 by emilionunez      ###   ########.fr       */
+/*   Updated: 2023/04/28 21:25:10 by emilionunez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	ft_duplicated(int *stack, int size)
 			if (stack[i] == stack[j])
 			{
 				ft_throw_error(stack);
+				free(stack);
 			}
 			j++;
 		}
@@ -65,11 +66,3 @@ void	ft_duplicated(int *stack, int size)
 		j = i + 1;
 	}
 }
-
-/*
-Estaría bien que la función que va a ir guardando los números 
-compruebe que el str de donde viene sea un número,
-que esté dentro de los límites y que no esté duplicado con los anteriores 
-números guardados y después ya lo guarda en el stack. 
-Todo con funciones aisladas.
-*/
