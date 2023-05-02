@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 22:54:08 by emilionunez       #+#    #+#             */
-/*   Updated: 2023/04/28 23:14:13 by emilionunez      ###   ########.fr       */
+/*   Updated: 2023/05/02 11:06:15 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+// Changes the position of the 2 first elements of the array
 void	ft_swap(int *stack, int size, char stack_id)
 {
 	int	aux;

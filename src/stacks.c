@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stacks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 20:07:50 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/28 22:44:10 by emilionunez      ###   ########.fr       */
+/*   Updated: 2023/05/02 11:07:09 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	*ft_populate_stack(char **input, int size)
 	return (stack);
 }
 
+// Measures length of given arguments
 int	ft_input_size(char **input)
 {
 	int	stack_size;

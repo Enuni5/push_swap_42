@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:14:37 by emilionunez       #+#    #+#             */
-/*   Updated: 2023/04/30 12:37:42 by emilionunez      ###   ########.fr       */
+/*   Updated: 2023/05/02 10:59:04 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+// Sends the first element to the end of the array
 void	ft_rotate(int *stack, int size, char stack_id)
 {
 	int	aux;
@@ -30,6 +31,7 @@ void	ft_rotate_ab(int *stack_a, int *stack_b, int size)
 	ft_printf("rr\n");
 }
 
+// Brings the last element to the front of the array
 void	ft_rev_rotate(int *stack, int size, char stack_id)
 {
 	int	aux;

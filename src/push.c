@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 22:03:05 by emilionunez       #+#    #+#             */
-/*   Updated: 2023/04/28 23:16:54 by emilionunez      ###   ########.fr       */
+/*   Updated: 2023/05/02 11:00:12 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+// Makes room at the end of the array for an element
 void	ft_moveup(int *stack, int size)
 {
 	int	i;
@@ -25,6 +26,7 @@ void	ft_moveup(int *stack, int size)
 	stack[i] = -1;
 }
 
+// Makes room at the beginning of the array for an element
 void	ft_movedown(int *stack, int size)
 {
 	int	i;
