@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:22:23 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/30 12:36:13 by emilionunez      ###   ########.fr       */
+/*   Updated: 2023/05/02 17:47:29 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 void	ft_is_number(char *num);
 void	ft_int_limits(char *num);
 void	ft_duplicated(int *stack, int size);
+int		ft_check_sort(int *stack, int size);
 
-// Memory functions
+// Memory, free and error functions
 char	**ft_save_str(char **input, int size);
 void	ft_free_matrix(char **matrix);
-
-// Error and free functions
+int		*ft_duplicate_stack(int *stack, int size);
 void	ft_throw_error(void *ptr);
 
 // Movement functions
@@ -42,10 +42,20 @@ void	ft_rev_rotate(int *stack, int size, char stack_id);
 void	ft_rev_rotate_ab(int *stack_a, int *stack_b, int size);
 
 // Order algorithm functions
+int		ft_sort_start(int *stack, int size);
+int		ft_short_sort(int *stack, int size);
+void	ft_sort_two(int *stack, int size);
+void	ft_sort_three(int *stack, int size);
 
 // Stack functions
 
 int		*ft_populate_stack(char **input, int size);
 int		ft_input_size(char **input);
+int		*ft_index_array(int *stack, int size);
+void	ft_print_stack(int *stack, int size);
+
+// Bubble sort functions
+int		*ft_sort_array_bubble(int *stack, int size);
+void	swap_bubble(int *stack_x, int *stack_y);
 
 #endif
