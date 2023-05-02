@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 20:07:50 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/02 11:07:09 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:47:44 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,43 @@ int	ft_input_size(char **input)
 	while (input[stack_size])
 		stack_size++;
 	return (stack_size);
+}
+
+// Takes an array and indexes it compared to its 
+//sorted version (using bubble sort)
+int	*ft_index_array(int *stack, int size)
+{
+	int	i;
+	int	j;
+	int	*bubbled_stack;
+	int	*index_stack;
+
+	i = -1;
+	index_stack = ft_duplicate_stack(stack, size);
+	bubbled_stack = ft_sort_array_bubble(stack, size);
+	while (++i < size)
+	{
+		j = -1;
+		while (++j < size)
+		{
+			if (stack[i] == bubbled_stack[j])
+				index_stack[i] = j;
+		}
+	}
+	free(bubbled_stack);
+	free(stack);
+	return (index_stack);
+}
+
+// Print a stack
+void	ft_print_stack(int *stack, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		printf("%d: %d\n", i, stack[i]);
+		i++;
+	}
 }
