@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:22:23 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/02 19:21:38 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:53:58 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ int		ft_sort_start(int *stack, int size);
 int		ft_short_sort(int *stack, int size);
 void	ft_sort_two(int *stack, int size);
 void	ft_sort_three(int *stack, int size);
-void	ft_sort_four(int *stack, int size);
+void	ft_sort_four(int *stack, int *stack_b, int size, int position);
+void	ft_sort_five(int *stack, int *stack_b, int size);
 
 // Stack functions
 
@@ -54,6 +55,7 @@ int		*ft_populate_stack(char **input, int size);
 int		ft_input_size(char **input);
 int		*ft_index_array(int *stack, int size);
 void	ft_print_stack(int *stack, int size);
+void	ft_empty_stack(int *stack, int size);
 
 // Bubble sort functions
 int		*ft_sort_array_bubble(int *stack, int size);

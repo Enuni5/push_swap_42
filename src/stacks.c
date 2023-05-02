@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 20:07:50 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/02 16:47:44 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:54:45 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,19 @@ void	ft_print_stack(int *stack, int size)
 	while (i < size)
 	{
 		printf("%d: %d\n", i, stack[i]);
+		i++;
+	}
+}
+
+// Empty the stack, sets values to -1
+void	ft_empty_stack(int *stack, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		stack[i] = -1;
 		i++;
 	}
 }

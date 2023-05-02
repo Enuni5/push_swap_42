@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:15:34 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/02 18:53:27 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:54:28 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,32 @@ int	ft_sort_start(int *stack, int size)
 		return (ft_short_sort(stack, size));
 	return (ft_check_sort(stack, size));
 }
-	/* else
-		ft_long_sort(stack, size); */
 
+/* else
+	ft_long_sort(stack, size); */
+// Calls sort functions depending on size, checks if stack is sorted 
+// before and after calling
 int	ft_short_sort(int *stack, int size)
 {
+	int	*stack_b;
+
+	stack_b = (int *)ft_calloc(size, sizeof(int));
+	ft_empty_stack(stack_b, size);
+	if (ft_check_sort(stack, size))
+		return (1);
 	if (size == 2)
 		ft_sort_two(stack, size);
 	if (size == 3)
 		ft_sort_three(stack, size);
 	if (size == 4)
-		ft_sort_four(stack, size);
+		ft_sort_four(stack, stack_b, size, 0);
+	if (size == 5)
+		ft_sort_five(stack, stack_b, size);
+	free(stack_b);
 	if (ft_check_sort(stack, size))
 		return (1);
 	return (0);
 }
-	/*if (size == 5)
-		ft_sort_five(stack, size); */
 
 /* void	ft_long_sort(int *stack, int size)
 {
