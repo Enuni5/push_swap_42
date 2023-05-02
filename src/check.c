@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emilionunez <emilionunez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 10:24:13 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/04/28 21:25:10 by emilionunez      ###   ########.fr       */
+/*   Updated: 2023/05/02 17:18:08 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,19 @@ void	ft_duplicated(int *stack, int size)
 		i++;
 		j = i + 1;
 	}
+}
+
+// Checks if indexed array is ordered
+int	ft_check_sort(int *stack, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size - 1)
+	{
+		if (stack[i] != i)
+			return (0);
+		i++;
+	}
+	return (1);
 }
