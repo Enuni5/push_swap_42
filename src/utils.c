@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 16:34:32 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/03 16:46:52 by enunez-n         ###   ########.fr       */
+/*   Created: 2023/05/03 16:13:27 by enunez-n          #+#    #+#             */
+/*   Updated: 2023/05/03 16:15:10 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	main(int argc, char **argv)
+// Checks the actual stack size (maybe some values has been moved)
+int	ft_stack_size(int *stack, int size)
 {
-	int		*stack_a;
-	char	**input;
-	int		stack_size;
+	int	i;
 
-	if (argc > 1)
-	{
-		argv++;
-		input = ft_save_str(argv, argc - 1);
-		if (input == NULL)
-			return (0);
-		stack_size = ft_input_size(input);
-		stack_a = ft_populate_stack(input, stack_size);
-		stack_a = ft_index_array(stack_a, stack_size);
-		ft_sort_start(stack_a, stack_size);
-		ft_free_matrix(input);
-		free(stack_a);
-	}
-	return (0);
+	i = 0;
+	while (stack[i] != -1 && i < size)
+		i++;
+	return (i);
 }
-		//system("leaks push_swap");
+
+// Count the bits of the maximum number in the stack.
+int	ft_count_bits(int size)
+{
+	int	count;
+
+	count = 0;
+	while (size > 0)
+	{
+		count++;
+		size = size / 2;
+	}
+	return (count);
+}

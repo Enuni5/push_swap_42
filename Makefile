@@ -1,4 +1,8 @@
-SRC = src/main.c src/memory.c src/error.c src/stacks.c src/check.c src/push.c src/rotate.c src/swap.c src/sort.c src/bubble.c src/short_sort.c 
+SRC = src/main.c src/memory.c src/error.c \
+	src/stacks.c src/check.c src/push.c \
+	src/rotate.c src/swap.c src/sort.c \
+	src/bubble.c src/short_sort.c src/radix.c \
+	src/utils.c
 
 OBJS = ${SRC:.c=.o}
 

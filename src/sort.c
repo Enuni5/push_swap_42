@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:15:34 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/03 12:56:50 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:51:43 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	ft_sort_start(int *stack, int size)
 {
 	int	*stack_b;
 
-	stack_b = (int *)ft_calloc(size, sizeof(int));
-	ft_empty_stack(stack_b, size);
 	if (ft_check_sort(stack, size))
 		exit(0);
+	stack_b = (int *)ft_calloc(size, sizeof(int));
+	ft_empty_stack(stack_b, size);
 	if (size < 6)
 	{
 		ft_short_sort(stack, stack_b, size);
@@ -31,7 +31,6 @@ void	ft_sort_start(int *stack, int size)
 		ft_radix(stack, stack_b, size);
 		free(stack_b);
 	}
-	return (ft_check_sort(stack, size));
 }
 
 // Calls sort functions depending on size, checks if stack is sorted 
