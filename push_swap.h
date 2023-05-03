@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:22:23 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/03 12:51:10 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/03 13:21:27 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	ft_sort_two(int *stack, int size);
 void	ft_sort_three(int *stack, int size);
 void	ft_sort_four(int *stack, int *stack_b, int size, int position);
 void	ft_sort_five(int *stack, int *stack_b, int size);
-void	ft_long_sort(int *stack_a, int *stack_b, int size);
 void	ft_radix(int *stack_a, int *stack_b, int size);
 
 // Stack functions
