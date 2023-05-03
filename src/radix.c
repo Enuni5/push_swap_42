@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:40:56 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/03 16:45:00 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:11:49 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,13 @@ void	ft_go_back_to_a(int *stack_a, int *stack_b, int size, int bit)
 	{
 		if (bit < (total_bits - 1))
 		{
-			if (((stack_b[0] >> (bit + 1)) && 1 == 0))
+			if ((((stack_b[0] >> (bit + 1)) && 1) == 0))
 				ft_rotate(stack_b, stack_size, 'b');
 			else
-				ft_push(stack_b, stack_a, stack_size, 'a');
+				ft_push(stack_b, stack_a, size, 'a');
 		}
 		else
-			ft_push(stack_b, stack_a, stack_size, 'a');
+			ft_push(stack_b, stack_a, size, 'a');
 		i++;
 	}
 }
@@ -85,9 +85,11 @@ void	ft_radix(int *stack_a, int *stack_b, int size)
 	while (i < total_bits)
 	{
 		size_of_stack = ft_stack_size(stack_a, size);
+		if (ft_check_sort(stack_a, size) == 1)
+			break ;
 		if (ft_partial_sorted(stack_a, size_of_stack) == 0)
-			ft_small_to_b(stack_a, stack_b, size_of_stack, i);
-		ft_go_back_to_a(stack_a, stack_b, size_of_stack, i);
+			ft_small_to_b(stack_a, stack_b, size, i);
+		ft_go_back_to_a(stack_a, stack_b, size, i);
 		i++;
 	}
 }

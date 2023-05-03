@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:34:32 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/03 16:46:52 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:11:15 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main(int argc, char **argv)
 		stack_a = ft_populate_stack(input, stack_size);
 		stack_a = ft_index_array(stack_a, stack_size);
 		ft_sort_start(stack_a, stack_size);
+		ft_print_stack(stack_a, stack_size);
 		ft_free_matrix(input);
 		free(stack_a);
 	}
