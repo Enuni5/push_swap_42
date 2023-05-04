@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:34:32 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/04 13:45:41 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/04 18:56:43 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,6 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+
 		//system("leaks push_swap");
+		//ft_print_stack(stack_a, stack_size);

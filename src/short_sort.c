@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 17:10:28 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/04 13:44:31 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/04 18:56:08 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,32 +58,32 @@ void	ft_sort_four(int *stack_a, int *stack_b, int size, int position)
 	if (find_position == 1)
 		ft_swap(stack_a, size, 'a');
 	ft_push(stack_a, stack_b, size, 'b');
-	ft_print_stack(stack_b, size);
 	ft_sort_three(stack_a, size - 1);
-	while (stack_b[0] != -1)
-		ft_push(stack_b, stack_a, size, 'a');
+	ft_push(stack_b, stack_a, size, 'a');
 }
 
-void	ft_sort_five(int *stack, int *stack_b, int size)
+void	ft_sort_five(int *stack_a, int *stack_b, int size)
 {
 	int	find_position;
 
 	find_position = 0;
 	while (find_position < size)
 	{
-		if (stack[find_position] == 0)
+		if (stack_a[find_position] == 0)
 			break ;
 		find_position++;
 	}
-	while (find_position >= 2 && find_position <= 3)
+	while (find_position == 2 || find_position == 3)
 	{
-		ft_rev_rotate(stack, size, 'a');
+		ft_rev_rotate(stack_a, size, 'a');
 		find_position++;
 	}
 	if (find_position == 4)
-		ft_rev_rotate(stack, size, 'a');
+		ft_rev_rotate(stack_a, size, 'a');
 	if (find_position == 1)
-		ft_swap(stack, size, 'a');
-	ft_push(stack, stack_b, size, 'b');
-	ft_sort_four(stack, stack_b, size, 1);
+		ft_swap(stack_a, size, 'a');
+	ft_push(stack_a, stack_b, size, 'b');
+	ft_sort_four(stack_a, stack_b, size - 1, 1);
+	while (stack_b[0] != -1)
+		ft_push(stack_b, stack_a, size, 'a');
 }
