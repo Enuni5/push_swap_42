@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:40:56 by enunez-n          #+#    #+#             */
-/*   Updated: 2023/05/04 17:59:19 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:41:23 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_small_to_b(int *stack_a, int *stack_b, int size, int bit)
 	{
 		if (ft_partial_sorted(stack_a, ft_stack_size(stack_a, size)) == 1)
 			break ;
-		if (((stack_a[0] >> bit) && 1) == 0)
+		if (((stack_a[0] >> bit) & 1) == 0)
 			ft_push(stack_a, stack_b, stack_size, 'b');
 		else
 			ft_rotate(stack_a, stack_size, 'a');
@@ -62,7 +62,7 @@ void	ft_go_back_to_a(int *stack_a, int *stack_b, int size, int bit)
 	{
 		if (bit < (total_bits - 1))
 		{
-			if ((((stack_b[0] >> (bit + 1)) && 1) == 0))
+			if ((((stack_b[0] >> (bit + 1)) & 1) == 0))
 				ft_rotate(stack_b, stack_size, 'b');
 			else
 				ft_push(stack_b, stack_a, size, 'a');

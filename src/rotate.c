@@ -6,7 +6,7 @@
 /*   By: enunez-n <enunez-n@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 23:14:37 by emilionunez       #+#    #+#             */
-/*   Updated: 2023/05/02 10:59:04 by enunez-n         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:40:47 by enunez-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,16 @@
 void	ft_rotate(int *stack, int size, char stack_id)
 {
 	int	aux;
+	int	i;
 
+	i = 0;
 	aux = stack[0];
-	ft_moveup(stack, size);
-	stack[size - 1] = aux;
+	while (i < size && stack[i] != -1)
+	{
+		stack[i] = stack[i + 1];
+		i++;
+	}
+	stack[i - 1] = aux;
 	if (stack_id == 'a' || stack_id == 'b')
 		ft_printf("r%c\n", stack_id);
 }
