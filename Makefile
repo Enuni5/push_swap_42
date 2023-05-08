@@ -8,14 +8,6 @@ OBJS = ${SRC:.c=.o}
 
 NAME = push_swap
 
-#BONUS DEFINITIONS#
-
-SRC_BONUS = 
-
-OBJS_BONUS = ${SRC_BONUS:.c=.o}
-
-NAME_BONUS = 
-
 #COMPILATION UTILS#
 
 LIBRARY = libft/libft.a
@@ -48,23 +40,11 @@ $(NAME): ${OBJS}
 	@echo "\n *** COMPILING PUSH-SWAP ***\n"
 	@${CC} ${OBJS} ${LIBRARY} -o ${NAME}
 
-
-#BONUS RULES#
-
-bonus: norminette libft compile_bonus
-
-compile_bonus: ${NAME_BONUS} 
-
-$(NAME_BONUS): ${OBJS_BONUS}
-	@echo "\n *** COMPILING PUSH_SWAP BONUS ***\n"
-	@${CC} ${OBJS_BONUS} ${LIBRARY} -o ${NAME}
-
 #CLEAN RULES#
 
 clean:
 	@${MAKE} -C libft clean
 	@${RM} ${OBJS}
-	@${RM} ${OBJS_BONUS}
 
 fclean: clean
 	@${MAKE} -C libft fclean
